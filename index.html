@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tamplate</title>
+    <meta name="description" content="Intecmedia Webpack Boilerplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/e62e4fe271.js" crossorigin="anonymous"></script>
+
+    <!-- head-js -->
+    <script>
+        (document.documentElement && document.documentElement.className && (function($html, $conn) {
+            // js test
+            $html.className = $html.className.replace('no-js', 'js');
+            // webp support test
+            var webp = new Image();
+            webp.onload = webp.onerror = function() {
+                $html.className += (webp.width == 1 && webp.height == 1 ? ' webp' : ' no-webp');
+            };
+            webp.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
+            // save-data header test
+            $html.className += ($conn && $conn.saveData ? ' save-data' : ' no-save-data');
+            // network information test: 'slow-2g', '2g', '3g', or '4g'
+            $html.className += ($conn && $conn.effectiveType ? ' network-detected network-' + $conn.effectiveType : ' network-unknown');
+        })(document.documentElement, navigator.connection || navigator.mozConnection || navigator.webkitConnection));
+    </script>
+    <!-- /head-js -->
+
+    <!-- block-head -->
+    <!-- /block-head -->
+
+    <!-- counters-head -->
+
+    <!-- /counters-head -->
+
+    <!-- open-graph -->
+    <meta property="og:locale" content="ru">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IntecMedia Tamplate">
+    <meta property="og:description" content="Intecmedia Webpack Boilerplate">
+    <meta property="og:image" content="/img/og-image.jpg">
+    <meta property="og:site_name" content="Tamplate">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="/img/og-image.jpg">
+    <meta name="twitter:title" content="IntecMedia Tamplate">
+    <meta name="twitter:description" content="Intecmedia Webpack Boilerplate">
+    <!-- <meta name="twitter:site" content="@intecmedia"> -->
+    <!-- <meta name="twitter:creator" content="@intecmedia"> -->
+
+    <!-- <meta property="fb:app_id" content="00000000000"> -->
+    <!-- /open-graph -->
+
+    <link rel="manifest" href="/img/favicons/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="Webpack">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/img/favicons/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Webpack">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/img/favicons/favicon-48x48.png">
+    <link href="css/app.min.css" rel="stylesheet">
+</head>
+
+<body class="">
+
+    <div class="container-fluid p-0">
+        <header class="header bg-warning" id="header">
+            <div class="container">
+                <div class="row header__inner">
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="header_img" id="header_img">
+                            <picture>
+                                <source srcset="img/upload/logo@resize-x.webp" type="image/webp">
+                                <img src="img/upload/logo.png" loading="lazy" width="149" height="43" intrinsicsize="149x43" alt="Tinyone">
+                            </picture>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 ml-auto" id="header-fixed">
+                        <nav class="navbar header__nav navbar-expand-md justify-content-end navbar-light mt-0" id='nav'>
+                            <button class="navbar-toggler header_toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="header_navbar collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto justify-content-end">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" data-scroll="#features" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" data-scroll="#touch" href="#">Support</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" data-scroll="#home" href="#">Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+        </header>
+
+        <main class="main">
+            <section class="home bg-warning" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 pt-md-5 pt-sm-3">
+                            <div class="offer">
+                                <h1 class="offer__title font-weight-bold">
+                                    Inspire your inspiration
+                                </h1>
+                                <h2 class="offer__intro w-75">
+                                    Simple to use for your app, products showcase and your inspiration
+                                </h2>
+                                <p class="offer__text pb-md-3 pb-sm-1">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit
+                                </p>
+                                <ul class="icons d-flex list-unstyled">
+                                    <li class="icons__item">
+                                        <a href="#" class="display-4">
+                                            <i class="fa fa-apple text-dark"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icons__item">
+                                        <a href="#" class="display-4">
+                                            <i class="fa fa-android text-dark"></i>
+                                        </a>
+                                    </li>
+                                    <li class="icons__item">
+                                        <a href="#" class="display-4">
+                                            <i class="fa fa-windows text-dark"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="ipad col-lg-5 col-sm-12 col-xs-12 ml-auto d-md-block d-sm-flex d-flex">
+                            <picture>
+                                <source srcset="img/upload/ipad@resize-x.webp" type="image/webp">
+                                <img src="img/upload/ipad.png" loading="lazy" width="315" height="470" intrinsicsize="315x470" alt="Tinyone">
+                            </picture>
+
+                        </div>
+                    </div>
+            </section>
+            <section class="features" id="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <h1 class='features__title font-weight-bold pb-1 text-center'>Tinyone features</h1>
+                            <h2 class='features__text mt-0 mb-0 ml-auto mr-auto text-center pb-4 w-75'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 features__item">
+                            <div class="features__inner d-flex">
+                                <i class="features__icon fa fa-tablet"></i>
+                                <div class="feature__block">
+                                    <h2 class="feature__title font-weight-bold">Fully Responsive</h2>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 features__item">
+                            <div class="features__inner d-flex">
+                                <i class="features__icon fa fa-lemon"></i>
+                                <div class="feature__block">
+                                    <h2 class="feature__title font-weight-bold">Fully Layered PSD</h2>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 features__item">
+                            <div class="features__inner d-flex">
+                                <i class="features__icon fa fa-folder"></i>
+                                <div class="feature__block">
+                                    <h2 class="feature__title font-weight-bold">Font Awesome Icons</h2>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 features__item">
+                            <div class="features__inner d-flex">
+                                <i class="features__icon fa fa-code"></i>
+                                <div class="feature__block">
+                                    <h2 class="feature__title font-weight-bold">HTML3 & CSS3</h2>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 features__item">
+                            <div class="features__inner d-flex">
+                                <i class="features__icon fa fa-envelope"></i>
+                                <div class="feature__block">
+                                    <h2 class="feature__title font-weight-bold">Email Template</h2>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 features__item">
+                            <div class="features__inner d-flex">
+                                <i class="features__icon fa fa-save"></i>
+                                <div class="feature__block">
+                                    <h2 class="feature__title font-weight-bold">Free to download</h2>
+                                    <p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="touch bg-dark" id="touch">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="touch__title text-warning text-center">Keep in touch with us</h1>
+                            <p class="touch__text text-white mt-0 mb-0 ml-auto mr-auto text-center w-75 h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+                            <div class="form-group">
+                                <label for=""></label>
+                                <form class="form d-flex justify-content-center">
+                                    <input type="email" class="form-control input__form" name="" placeholder="Enter your email to update">
+                                    <button type="button" class="btn form__btn btn-warning font-weight-bold">SUBMIT</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="credits text-white text-center m-0 ml-auto mr-auto">
+                            HALOVIETNAM LTD
+                            66, Dang Van ngu, Dong Da
+                            Hanoi, Vietnam
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- svg-sprite -->
+    <div id="svg-sprite-node" style="display:none;">
+        <!-- "/img/svg-sprite.svg" -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol viewBox="0 0 58 51" id="svg-sprite-pitcher-logo">
+    <path d="M2.206 20.933h1.432c1.378 0 1.83-.692 1.83-2.028v-.802c0-1.239-.337-2.076-1.69-2.076H2.206v4.906zm49.134-.541h1.09c1.492 0 2.136-.519 2.136-2.077v-.212c0-1.246-.359-2.076-1.712-2.076H51.34v4.365zm-8.542-.473h3.777v2.03h-3.777v4.127h4.693v2.052h-6.9V13.975h6.9v2.052h-4.693v3.892zm-6.29 2.147h-3.44v6.062h-2.206V13.975h2.206v6.062h3.44v-6.062h2.206v14.153h-2.207v-6.062zm-7.243-4.552c.017.202.025.415.025.636v.307h-2.112v-.72c0-1.332-.552-2.005-1.631-2.005-1.069 0-1.632.673-1.632 2.005v6.31c0 1.19.397 2.194 1.737 2.194 1.348 0 1.736-.983 1.736-2.194v-.967h2.113v.873c0 2.55-1.21 4.34-3.896 4.34-2.676 0-3.872-1.806-3.872-4.34V17.95c0-2.571 1.243-4.15 3.766-4.15 2.388 0 3.63 1.402 3.766 3.714zm-13.787-1.487H12.45v-2.052h8.261v2.052h-3.028v12.1h-2.206v-12.1zm-6.42-2.052h2.207v14.153H9.06V13.975zm48.143 14.153h-2.43l-2.089-5.684H51.34v5.684h-2.206V13.975h3.767c2.639 0 3.848 1.355 3.848 3.962v.144c0 1.844-.66 3.168-1.827 3.845l2.28 6.202zM23.956 4.014c-7.537 0-14.891-.788-21.988-2.281A1.66 1.66 0 00.004 3.367c0 .728.467 1.386 1.163 1.589C10.572 7.7 20.52 9.15 30.803 9.15c8.036 0 15.87-.875 23.393-2.59 1.491-.34 2.535-1.696 2.535-3.233A3.32 3.32 0 0053.421 0a3.13 3.13 0 00-.85.112 106.397 106.397 0 01-28.615 3.902zM2.206 22.962v5.166H0V13.975h3.778c2.701 0 3.873 1.633 3.873 4.222v.59c0 2.697-1.28 4.175-4.013 4.175H2.206z" style="fill:var(--fill-color, #000000)" />
+</symbol></defs></svg>
+<!-- /"/img/svg-sprite.svg" -->
+    </div>
+    <!-- /svg-sprite -->
+
+    <!-- debug-vars -->
+    <script>
+        (function() {
+            console.log("APP", {
+                "TITLE": "IntecMedia Tamplate",
+                "SHORT_NAME": "Tamplate",
+                "DESCRIPTION": "Intecmedia Webpack Boilerplate",
+                "PUBLIC_PATH": "/",
+                "USE_FAVICONS": true,
+                "USE_SERVICE_WORKER": false,
+                "LANGUAGE": "ru",
+                "START_URL": "/?utm_source=app_manifest",
+                "THEME_COLOR": "#fff",
+                "BACKGROUND_COLOR": "#fff",
+                "HTML_PRETTY": true,
+                "SENTRY": {
+                    "dsn": "",
+                    "ignoreErrors": [],
+                    "blacklistUrls": [],
+                    "whitelistUrls": []
+                },
+                "ENV": {
+                    "DEBUG": false,
+                    "DEV_SERVER": false,
+                    "STANDALONE": true,
+                    "WATCH": false,
+                    "PROD": false,
+                    "NODE_ENV": "development",
+                    "USE_SOURCE_MAP": true,
+                    "USE_LINTERS": false,
+                    "SOURCE_PATH": "C:\Tamplate\Intecmedia.Webpack-master\source",
+                    "OUTPUT_PATH": "C:\Tamplate\Intecmedia.Webpack-master\build",
+                    "PACKAGE_NAME": "Webpack",
+                    "BROWSERSLIST": {
+                        "production": ["Android >= 5", "IE >= 10", "iOS >= 9", "Safari >= 9", "last 2 Edge versions", "last 2 Chrome versions", "last 2 ChromeAndroid version", "last 2 Firefox versions", "last 2 Opera versions"],
+                        "development": ["last 1 Safari versions", "last 1 Chrome versions", "last 1 Firefox versions", "last 1 Opera versions"]
+                    },
+                    "BROWSERS": ["last 1 Safari versions", "last 1 Chrome versions", "last 1 Firefox versions", "last 1 Opera versions"],
+                    "SITEMAP": [{
+                        "template": "source/index.html",
+                        "filename": "index.html",
+                        "url": "",
+                        "path": "/index.html"
+                    }]
+                }
+            });
+            console.log("PAGE", {
+                "URL": "/",
+                "PATH": "/index.html",
+                "title": "Tinyone",
+                "homepage": true,
+                "description": null,
+                "og_image": null
+            });
+        })();
+    </script>
+    <!-- /debug-vars -->
+
+    <!-- counters-body -->
+
+    <!-- /counters-body -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
