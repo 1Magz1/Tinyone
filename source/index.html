@@ -1,0 +1,136 @@
+---
+title: Tinyone
+homepage: true
+description:
+og_image:
+---
+
+{% extends "partials/layouts/index.html" %}
+
+{% import "partials/macros/resize.html" as resize %}
+
+{% block content %}
+	<section class="home bg-warning" id="home">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-sm-12 pt-md-5 pt-sm-3">
+					<div class="offer">
+						<h1 class="offer__title font-weight-bold">
+						Inspire your inspiration
+						</h1>
+						<h2 class="offer__intro w-75">
+						Simple to use for your app, products showcase and your inspiration
+						</h2>
+						<p class="offer__text pb-md-3 pb-sm-1">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu et eros porta lobortis sit
+						</p>
+						<ul class="icons d-flex list-unstyled">
+						<li class="icons__item">
+							<a href="#" class="display-4">
+								<i class="fa fa-apple text-dark"></i>
+							</a>
+						</li>
+						<li class="icons__item">
+							<a href="#" class="display-4">
+								<i class="fa fa-android text-dark"></i>
+							</a>
+						</li>
+						<li class="icons__item">
+							<a href="#" class="display-4">
+								<i class="fa fa-windows text-dark"></i>
+							</a>
+						</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="ipad col-lg-5 col-sm-12 col-xs-12 ml-auto d-md-block d-sm-flex d-flex">
+					{{ resize.webp('img/upload/ipad.png', 'Tinyone') }}
+				</div>
+		</div>
+	</section>
+	<section class="features" id="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 ">
+					<h1 class='features__title font-weight-bold pb-1 text-center'>Tinyone features</h1>
+					<h2 class='features__text mt-0 mb-0 ml-auto mr-auto text-center pb-4 w-75'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 features__item">
+					<div class="features__inner d-flex">
+						<i class="features__icon fa fa-tablet"></i>
+						<div class="feature__block">
+							<h2 class="feature__title font-weight-bold">Fully Responsive</h2>
+							<p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 features__item">
+					<div class="features__inner d-flex">
+						<i class="features__icon fa fa-lemon"></i>
+						<div class="feature__block">
+							<h2 class="feature__title font-weight-bold">Fully Layered PSD</h2>
+							<p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 features__item">
+					<div class="features__inner d-flex">
+						<i class="features__icon fa fa-folder"></i>
+						<div class="feature__block">
+							<h2 class="feature__title font-weight-bold">Font Awesome Icons</h2>
+							<p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 features__item">
+					<div class="features__inner d-flex">
+						<i class="features__icon fa fa-code"></i>
+						<div class="feature__block">
+							<h2 class="feature__title font-weight-bold">HTML3 & CSS3</h2>
+							<p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 features__item">
+					<div class="features__inner d-flex">
+						<i class="features__icon fa fa-envelope"></i>
+						<div class="feature__block">
+							<h2 class="feature__title font-weight-bold">Email Template</h2>
+							<p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 features__item">
+					<div class="features__inner d-flex">
+						<i class="features__icon fa fa-save"></i>
+						<div class="feature__block">
+							<h2 class="feature__title font-weight-bold">Free to download</h2>
+							<p class="feature__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="touch bg-dark" id="touch">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="touch__title text-warning text-center">Keep in touch with us</h1>
+					<p class="touch__text text-white mt-0 mb-0 ml-auto mr-auto text-center w-75 h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+					<div class="form-group">
+					  <label for=""></label>
+						<form class="form d-flex justify-content-center">
+							<input type="email"
+							class="form-control input__form" name="" placeholder="Enter your email to update">
+							<button type="button" class="btn form__btn btn-warning font-weight-bold">SUBMIT</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,126 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    li	{
+        font-weight: 700;
+        font-size: 22px;
+        @include media-breakpoint-down(xs){
+            font-size: 18px;
+        }
+    }
+}
+.header-fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+    animation-name: show_header;
+    animation-duration: 1s;
+    .header__inner{
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+    .header_logo {
+        right: 0;
+    }
+    .header_navbar {
+        left: 10%;
+    }
+}
+@keyframes show_header {
+    0% {
+        top: -70px;
+
+        opacity: .5;
+    }
+    100% {
+        top: 0;
+
+        opacity: 1;
+    }
+}
+.header__nav {
+    margin-left: 86px;
+    @include media-breakpoint-down(sm){
+        margin-top: 35px;
+        margin-left: 0;
+    }
+    @include media-breakpoint-down(xs){
+        margin-top: 45px;
+        margin-left: 0;
+    }
+    ul{
+        li{
+            margin-right: 28px;
+            @include media-breakpoint-down(xs){
+                margin-right: 14px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+.header__inner{
+    padding-top: 60px;
+    padding-bottom: 56px;
+    @include media-breakpoint-down(sm){
+        padding: 25px 0;
+    }
+    @include media-breakpoint-down(xs){
+        padding: 18px 0;
+    }
+}
+.header_logo {
+    top: 7px;
+    right: 25%;
+    @include media-breakpoint-down(md){
+        top: 10px;
+    }
+}
+.header_img{
+    @include media-breakpoint-down(sm){
+        text-align: center;
+    }
+
+}
+.header_navbar{
+    left: 44%;
+    @include media-breakpoint-down(sm){
+        position: absolute;
+        left: 3%;
+    }
+}
+.navbar-nav {
+    a {
+        cursor: pointer;
+        &::after {
+            display: block;
+            width: 0%;
+
+            border-bottom: 2px solid #010101;
+
+            transition: width .3s ease-out;
+
+            content: "";
+        }
+        &:hover{
+            &::after{
+                width: 25%;
+            }
+        }
+        &:focus{
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        flex-direction: row;
+    }
+}
+.header_toggler{
+    text-align: center;
+}
